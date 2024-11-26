@@ -740,8 +740,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		185CE0D41A0142C5006C5EA4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1889E17B1A00273D00827E5A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		18D1E1AB194B477A00BAFD5F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		18FE0753191AAC3500485617 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2002E6021E5F5BDA007AF951 /* TWTRTweetDelegationHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTRTweetDelegationHelperTest.m; sourceTree = "<group>"; };
@@ -2978,9 +2976,8 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
-				ko,
-				ja,
 			);
 			mainGroup = A97654DC18E0B29B00E25169;
 			productRefGroup = A97654E618E0B29B00E25169 /* Products */;
@@ -3429,8 +3426,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				A9FB560D18FDC99B001A4137 /* en */,
-				1889E17B1A00273D00827E5A /* ko */,
-				185CE0D41A0142C5006C5EA4 /* ja */,
 			);
 			name = InfoPlist.strings;
 			path = .;
