@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "TwitterKit",
     platforms: [
-        .iOS(.v14) // Adjust the minimum iOS version if necessary
+        .iOS(.v14)
     ],
     products: [
         .library(
@@ -15,19 +15,25 @@ let package = Package(
     targets: [
         .target(
             name: "TwitterKit",
-            path: "TwitterKit", // Ensure this matches the path to the TwitterKit source folder
+            path: "TwitterKit",
             exclude: [
-                "Info.plist" // Exclude unnecessary files
+                "Info.plist",
+                "Resources/en.lproj/InfoPlist.strings", // Exclude duplicate resources
+                "Resources" // Exclude unnecessary resources if needed
             ],
             resources: [
-                .process("Resources") // Add if there are resource files
+                .process("Resources")
             ],
-            publicHeadersPath: "Include" // Adjust if public headers are stored elsewhere
+            publicHeadersPath: "PublicHeaders", // Adjust if headers are elsewhere
+            cSettings: [
+                .headerSearchPath("."),
+                .headerSearchPath("PublicHeaders") // Add your headers path
+            ]
         ),
         .testTarget(
             name: "TwitterKitTests",
             dependencies: ["TwitterKit"],
-            path: "Tests" // Adjust if tests are in a different directory
+            path: "Tests"
         )
     ]
 )
