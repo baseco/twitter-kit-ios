@@ -18,16 +18,16 @@ let package = Package(
             path: "TwitterKit",
             exclude: [
                 "Info.plist",
-                "Resources/en.lproj/InfoPlist.strings", // Exclude duplicate resources
-                "Resources" // Exclude unnecessary resources if needed
+                "Resources/en.lproj/InfoPlist.strings", // Exclude specific duplicate resources
+                "Resources/*/InfoPlist.strings" // Wildcard to exclude all localized InfoPlist.strings
             ],
             resources: [
-                .process("Resources")
+                .process("Resources") // Include necessary resources
             ],
-            publicHeadersPath: "PublicHeaders", // Adjust if headers are elsewhere
+            publicHeadersPath: "PublicHeaders",
             cSettings: [
                 .headerSearchPath("."),
-                .headerSearchPath("PublicHeaders") // Add your headers path
+                .headerSearchPath("PublicHeaders")
             ]
         ),
         .testTarget(
